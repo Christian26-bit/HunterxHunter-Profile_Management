@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+
+<BorderPane fx:controller="com.example.hunterxhunterprofilemanagement.HxhController"
+            xmlns:fx="http://javafx.com/fxml">
+
+    <top>
+        <HBox spacing="20" style="-fx-padding: 10;">
+            <Label text="Hunter x Hunter Profile Management"
+                   style="-fx-font-size: 26px; -fx-font-weight: bold;"
+                   HBox.hgrow="ALWAYS" />
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="10" style="-fx-padding: 15; -fx-background-color: #f6f6f6; -fx-border-color: #ccc;">
+            <ImageView fx:id="imagePreview" fitWidth="160" fitHeight="160" preserveRatio="true"/>
+
+            <Button text="Upload Image" fx:id="uploadBtn"/>
+
+            <Label text="Last Name" />
+            <TextField fx:id="lastNameField"/>
+
+            <Label text="Given Name" />
+            <TextField fx:id="givenNameField"/>
+
+            <Label text="Middle Name" />
+            <TextField fx:id="middleNameField"/>
+
+            <Label text="Nen Type" />
+            <ComboBox fx:id="nenTypeBox"/>
+
+            <Label text="Rank" />
+            <TextField fx:id="rankField"/>
+
+            <HBox spacing="10">
+                <Button text="Save" fx:id="saveBtn"/>
+                <Button text="Clear" fx:id="clearBtn"/>
+                <Button text="Delete" fx:id="deleteBtn"/>
+            </HBox>
+
+        </VBox>
+    </left>
+
+    <center>
+        <TableView fx:id="tableView">
+            <columns>
+                <TableColumn text="Image" fx:id="imageCol" prefWidth="120"/>
+                <TableColumn text="Last Name" fx:id="lastNameCol"/>
+                <TableColumn text="Given Name" fx:id="givenNameCol"/>
+                <TableColumn text="Middle Name" fx:id="middleNameCol"/>
+                <TableColumn text="Nen Type" fx:id="nenTypeCol"/>
+                <TableColumn text="Rank" fx:id="rankCol"/>
+            </columns>
+        </TableView>
+    </center>
+
+</BorderPane>
